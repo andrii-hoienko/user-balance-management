@@ -1,10 +1,5 @@
 # User balance management
 
-## Description
-
-Detailed description of the project, including its background, goals, and any specific context relevant to understanding
-the project's purpose.
-
 ## Features
 
 - Endpoint for setting users' balance based on a map of user IDs and balances.
