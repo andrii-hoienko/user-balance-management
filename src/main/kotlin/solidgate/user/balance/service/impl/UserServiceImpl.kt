@@ -26,7 +26,7 @@ class UserServiceImpl(private val userRepository: UserRepository) : UserService 
     private fun validateIds(userIds: Set<Long>, users: Set<User>) {
         if (userIds.size != (users.size)) {
             val actualUserIds = users.stream().map(User::id).collect(toSet())
-            val missingIds = userIds.subtract(actualUserIds);
+            val missingIds = userIds.subtract(actualUserIds)
             throw UserNotFoundException("Users with ids: $missingIds not exists")
         }
     }

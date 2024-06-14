@@ -47,7 +47,7 @@ class UserControllerTest(
         val response = restTemplate.postForEntity(String.format(URL_TEMPLATE, port), request, String::class.java)
 
         assert(response.statusCode.is2xxSuccessful)
-        assertEquals(SUCCESS_MESSAGE, response.body);
+        assertEquals(SUCCESS_MESSAGE, response.body)
         assertUsersHaveExpectedBalance(expectedBalance)
     }
 
@@ -65,7 +65,7 @@ class UserControllerTest(
         val response = restTemplate.postForEntity(String.format(URL_TEMPLATE, port), request, String::class.java)
 
         assert(response.statusCode.is2xxSuccessful)
-        assertEquals(SUCCESS_MESSAGE, response.body);
+        assertEquals(SUCCESS_MESSAGE, response.body)
         assertUsersHaveExpectedBalance(expectedBalance)
     }
 
@@ -82,7 +82,7 @@ class UserControllerTest(
         val response = restTemplate.postForEntity(String.format(URL_TEMPLATE, port), request, ErrorResponseDto::class.java)
 
         assert(response.statusCode.is4xxClientError)
-        assertEquals(USER_ID_NOT_FOUND_MESSAGE, response.body?.errorMessage);
+        assertEquals(USER_ID_NOT_FOUND_MESSAGE, response.body?.errorMessage)
     }
 
     @Test
@@ -98,7 +98,7 @@ class UserControllerTest(
         val response = restTemplate.postForEntity(String.format(URL_TEMPLATE, port), request, ErrorResponseDto::class.java)
 
         assert(response.statusCode.is4xxClientError)
-        assertEquals(INVALID_BALANCE_MESSAGE, response.body?.errorMessage);
+        assertEquals(INVALID_BALANCE_MESSAGE, response.body?.errorMessage)
     }
 
     private fun assertUsersHaveExpectedBalance(expectedBalance: Double) {
