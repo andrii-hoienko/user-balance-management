@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-mock-users
+      author: ahoienko
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: name
+                  value: "Darth Vader"
+              - column:
+                  name: balance
+                  value: "100.00"
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: name
+                  value: "Super Sus"
+              - column:
+                  name: balance
+                  value: "200.00"
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: name
+                  value: "Lion El’Jonson"
+              - column:
+                  name: balance
+                  value: "300.00"
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: name
+                  value: "Me"

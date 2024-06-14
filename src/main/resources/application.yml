@@ -1,0 +1,14 @@
+spring:
+    application:
+        name: User balance application
+    datasource:
+        url: ${DATASOURCE-URL}
+        username: ${DB_USER}
+        password: ${DB_PASSWORD}
+        jpa:
+            hibernate:
+                ddl-auto: create-drop
+
+server:
+    servlet:
+        context-path: /api/v1
